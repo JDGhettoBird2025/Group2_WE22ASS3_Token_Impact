@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Guess the Meme Game</title>
+    <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #752f3d;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: #4a0f0f;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+      .navbar nav a:hover{
+      color: rgb(208, 165, 9);
+      transition: all 0.3s ease;
+    }
+
+    .navbar .signup-btn {
+      background-color: white;
+      color: #4a0f0f;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      color: black;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h2, h3 {
+      margin-top: 1.5rem;
+      color: #4a0f0f;
+    }
+
+    .games {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .game {
+      flex: 1;
+      text-align: center;
+    }
+
+    .game img {
+      width: 100%;
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .about {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+    <header class="navbar">
+    <div class="logo">Logo</div>
+    <nav>
+      <a href="../SS2HomePage.html">Home</a>
+      <a href="../SS2TokensPage.html">Tokens</a>
+      <a href="../SS2LeaderboardPage.html">Leaderboard</a>
+      <a href="../SS2StoresOrDonationsPage.html">Store</a>
+      <a href="../SS2ContactPage.html">Contact Us</a>
+    </nav>
+    <button class="signup-btn">Sign Up</button>
+  </header>
+    <div class="game-container">
+        <h1>Guess the Meme!</h1>
+        <div class="meme-display">
+            <img id="meme-image" src="" alt="Meme Image">
+        </div>
+        <div class="options">
+            <button class="option" onclick="checkAnswer(0)">Option 1</button>
+            <button class="option" onclick="checkAnswer(1)">Option 2</button>
+            <button class="option" onclick="checkAnswer(2)">Option 3</button>
+            <button class="option" onclick="checkAnswer(3)">Option 4</button>
+        </div>
+        <div class="feedback">
+            <p id="feedback-text"></p>
+        </div>
+        <div class="score">
+            <p id="score">Score: 0</p>
+        </div>
+        <button id="start-btn" onclick="startGame()">Start Game</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

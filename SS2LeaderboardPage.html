@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Token Impact</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #752f3d;
+      color: #fff;
+    }
+
+    .navbar {
+      background-color: #4a0f0f;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .navbar .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar .signup-btn {
+      background-color: white;
+      color: #4a0f0f;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .navbar nav a:hover{
+      color: rgb(208, 165, 9);
+      transition: all 0.3s ease;
+    }
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      background: white;
+      color: black;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    }
+
+    h2, h3 {
+      margin-top: 1.5rem;
+      color: #4a0f0f;
+    }
+
+    .games {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 1rem;
+    }
+
+    .game {
+      flex: 1;
+      text-align: center;
+    }
+
+    .game img {
+      width: 100%;
+      max-width: 120px;
+      height: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .about {
+      margin-top: 2rem;
+    }
+    .wrapper{
+   width: 100%;
+   height: 100%;
+}
+.lboard_section{
+   width: 500px;
+   height: 400px;
+   margin: 100px auto 0;
+   background: brown;
+   border-radius: 5px;
+   padding-top: 25px 40px;
+   position: relative;
+}
+.lboard_section ul{
+   display: flex;
+}
+.lboard_section ul li{
+   margin-right: 50px;
+   font-size: 18px;
+   font-weight: 600;
+   color: #3a3d51;
+   cursor: pointer;
+}
+
+.lboard_section ul li:hover,
+
+.lboard_section ul li.active{
+   color: #fff;
+   text-decoration: none;
+}
+
+.lboard_wrap{
+   position: absolute;
+   top: 70px;
+   left: 40px;
+   background: rgb(241, 193, 1);
+   width: 100%;
+   height: 100%;
+   border-radius: 5px;
+}
+.lboard_wrap .lboard_item{
+   padding:25px;  
+}
+.lboard_wrap .lboard_item .lboard_mem{
+   display: flex;
+   align-items: center;
+   padding: 15px 0;
+   border-bottom: 1px solid #ffe773;
+}
+.lboard_wrap .lboard_item .lboard_mem:first-child{
+   padding-top: 0;
+}
+.lboard_wrap .lboard_item .lboard_mem:last-child{
+   border-bottom: 0;
+   padding-bottom: 0;
+}
+.lboard_wrap .lboard_item{
+   width: 50px;
+}
+.lboard_wrap .lboard_mem .img{
+   width: 50px;
+}
+
+
+.lboard_section .lboard_mem .img img{
+   display: block;
+   width: 100%;
+}
+
+
+.lboard_wrap .lboard_item .name_bar{
+   margin: 0 20px;
+   width: calc(100% 150px);
+}
+.lboard_wrap .lboard_item .name_bar p{
+   color: #3a3d51;
+}
+
+
+.lboard_wrap .lboard_item .name_bar p span{
+   margin-right: 5px;
+}
+
+
+.lboard_wrap .lboard_item .points{
+   width: 100px;
+   color: #3a3d51;
+}
+
+.lboard_wrap .lboard_item .bar_wrap{
+   height: 5px;
+   width: 100%;
+   background: #d5b000;
+   border-radius: 5px;
+   margin-top: 5px;
+   position: relative;
+   overflow: hidden;
+}
+
+
+.lboard_wrap .lboard_item .bar_wrap .inner_bar{
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 5px;
+   background: #fff;
+   border-radius: 5px;
+   border-top-right-radius: 0px;
+   border-bottom-right-radius: 0px;
+}
+
+  </style>
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">Logo</div>
+    <nav>
+      <a href="SS2HomePage.html">Home</a>
+      <a href="SS2TokensPage.html">Tokens</a>
+      <a href="SS2LeaderboardPage.html">Leaderboard</a>
+      <a href="SS2StoresOrDonationsPage.html">Store</a>
+      <a href="SS2ContactPage.html">Contact Us</a>
+    </nav>
+    <button class="signup-btn">Sign Up</button>
+  </header>
+    <!-- -->
+     <div class="hero" id="home">
+        <div class="hero__container">
+        </div>
+     </div>
+      <div class="wrapper">
+            <div class="lboard_section">
+                <div class="lboard_tabs">
+                    <div class="tabs">
+                        <ul>
+                            <li data-li="today">Today</li>
+                            <li class="active">Month</li>
+                            <li data-li="year">Year</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="lboard_wrap">
+                    <div class="lboar_item today">
+                        <div class="lboard_mem">
+                            <div class="img">
+                                <img src="Leaderboard C1.jpg" alt="">
+                            </div>
+                            <div class="name_bar">
+                                <p><span>1.</span> Mia</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                200 points
+                            </div>
+                        </div>
+                        <div class="lboard_mem">
+                            <div class="img">
+                                <img src="Leaderboard C2.jpg" alt="">
+                            </div>
+                            <div class="name_bar">
+                                <p><span>2.</span> Armandt</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                190 points
+                            </div>
+                        </div>
+                        <div class="lboard_mem">
+                            <div class="img">
+                                <img src="Leaderboard C3.jpg" alt="">
+                            </div>
+                            <div class="name_bar">
+                                <p><span>3.</span> Joel</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                170 points
+                            </div>
+                        </div>
+                        <div class="lboard_mem">
+                            <div class="img">
+                                <img src="Leaderboard C4.jpg" alt="">
+                            </div>
+                            <div class="name_bar">
+                                <p><span>4.</span> Khunene</p>
+                                <div class="bar_wrap">
+                                    <div class="inner_bar" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">
+                                40 points
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lboar_item Month">
+                        month
+                    </div>
+
+                    <div class="lboar_item Year">
+                        year
+                    </div>
+                </div>
+            </div>
+        </div>
+     <script src="SS2App.js"></script>
+</body>
+</html>
